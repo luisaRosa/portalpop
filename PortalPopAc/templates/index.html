@@ -1,0 +1,344 @@
+
+<!DOCTYPE html>
+<html>
+<title>PoP :: AC</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3-theme-teal.css">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="static/css/style.css">
+<body>
+
+  <div class="w3-container">
+
+    <ul  class="w3-navbar w3-theme " id="top">
+      <li><a class=" w3-theme-dark w3-padding-16" href="index.html">Início</a></li>
+      <li><a class="w3-padding-16" onclick="document.getElementById('ContatoModal').style.display='block'">Contato</a></li>
+      <li class="w3-right w3-dropdown-hover">
+        <a class="w3-padding-16" href="javascript:void(0)" style="border-left: solid 1px #fff;"> <i class="fa fa-user" aria-hidden="true"></i>&nbsp; Usuário <i class="fa fa-caret-down"></i></a>
+        <div class="w3-dropdown-content w3-card-4">
+          <a class="w3-padding-16" href="javascript:void(0)">Entrar</a>
+          <a class="w3-padding-16" href="javascript:void(0)">Cadastrar</a>
+        </div>
+      </li>
+    </ul>
+
+    <img src="static/imagens/banner.png" alt="banner" height="170" width="100%">
+
+    <!-- Header -->
+    <header class="w3-container w3-theme w3-padding" id="myHeader"> 
+      <div class="w3-center">
+        <h1 class="w3-xxxlarge w3-animate-bottom">Ponto de Presença da RNP no Acre</h1>
+      </div>
+    </header>
+
+    <!-- Modal -->
+    <div id="ContatoModal" class="w3-modal">
+      <div class="w3-modal-content w3-card-8 w3-animate-top">
+        <div class="w3-card white">
+          <div class="w3-border">
+            <ul class="w3-navbar w3-theme">
+              <li><a class="w3-btn w3-theme testbtn" onclick="openCity(event, 'Email')">Mande-nos um e-mail</a></li>
+              <li><a class="w3-btn w3-theme testbtn" onclick="openCity(event, 'Endereco')">Onde estamos</a></li>
+              <li><a class="w3-btn w3-theme testbtn" onclick="openCity(event, 'Horarios')">Nosso horário</a></li>
+              <li><a class="w3-btn w3-theme testbtn" onclick="openCity(event, 'Telefone')">e &nbsp;&nbsp;&nbsp; Telefone!</a></li>
+              <span onclick="document.getElementById('ContatoModal').style.display='none'" class="w3-closebtn">&times;&nbsp;</span>
+            </ul>
+            <div id="Email" class="w3-container city w3-animate-opacity">
+              <form id="contato">
+                <div class="w3-group">      
+                  <label class="w3-label w3-validate">Seu nome</label>
+                  <input class="w3-input" type="text" required>
+                </div>
+                <div class="w3-group">      
+                  <label class="w3-label w3-validate">Seu email</label>
+                  <input class="w3-input" type="text" required>
+                </div>
+                <div class="w3-group">      
+                  <label class="w3-label">Do que se trata? &nbsp;</label>
+                  <input id="duvida" class="w3-radio" type="radio" name="assunto" value="duvida" checked>
+                  <label class="w3-validate">Dúvida</label>
+                  <input id="critica" class="w3-radio" type="radio" name="assunto" value="critica">
+                  <label class="w3-validate">Crítica</label>
+                  <input id="sugestao" class="w3-radio" type="radio" name="assunto" value="sugestao">
+                  <label class="w3-validate">Sugestão</label>
+                </div>  
+                <div class="w3-group">   
+                  <label class="w3-label">O que quer nos dizer?</label>   
+                  <textarea class="w3-input" name="mensagem" form="contato"></textarea>
+                </div>
+                <div>  
+                  <p align="right">
+                    <a class="w3-btn we-red" onclick="document.getElementById('ContatoModal').style.display='none'">Cancelar</a>
+                    <a class="w3-btn w3-theme">Enviar</a>
+                  </p> 
+                </div>
+              </form>                
+            </div>                
+
+            <div id="Endereco" class="w3-container city w3-animate-opacity">
+              <h4>Campus Universitário Reitor Aulio Gélio Alves de Souza, BR-364 - Km 04 - Bloco de Energia e Clima. Rio Branco — AC. CEP: 69915-900</h4>
+            </div>
+
+            <div id="Horarios" class="w3-container city w3-animate-opacity">
+              <h3>07:00 ás 18:00 de segunda a sexta-feira.</h3>
+            </div>
+
+            <div id="Telefone" class="w3-container city w3-animate-opacity">
+              <h3>(68) 3901-2507</h3>
+            </div>
+          </div>
+          <footer class="w3-container w3-theme">
+            <br>
+          </footer>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-row-padding w3-center w3-margin-top">
+      <div class="w3-quarter">
+        <div class="w3-card-2 w3-padding-top" style="min-height:280px"
+        onmouseover="document.getElementById('servico-icon-white').style='display:block;font-size:120px';document.getElementById('servico-icon-white').style.textDecoration='none';document.getElementById('servico-icon-orange').style='display:none';this.style.background='orange'" 
+        onmouseout="document.getElementById('servico-icon-white').style='display:none;font-size:120px';document.getElementById('servico-icon-orange').style='display:block;font-size:120px';this.style.background='white'"
+        >
+
+        <h3>Serviços</h3><br>
+
+        <a href="/servicos.html" id="servico-icon-white" class="fa fa-desktop w3-margin-bottom w3-text-white" style="display:'none';font-size:0px;"></a>
+        <i id="servico-icon-orange" class="fa fa-desktop w3-margin-bottom w3-text-orange" style="display:'block';font-size:120px"></i>
+        <p>Tráfego, estatísticas e outros</p>
+      </div>
+
+    </div>
+
+    <div class="w3-quarter">
+      <div class="w3-card-2 w3-padding-top" style="min-height:280px"
+      onmouseover="document.getElementById('cliente-icon-white').style='display:block;font-size:120px';document.getElementById('cliente-icon-white').style.textDecoration='none';document.getElementById('cliente-icon-orange').style='display:none';this.style.background='orange'" 
+      onmouseout="document.getElementById('cliente-icon-white').style='display:none;font-size:120px';document.getElementById('cliente-icon-orange').style='display:block;font-size:120px';this.style.background='white'" 
+      >
+
+      <h3>Clientes</h3><br>
+      <a href="clientes.html" id="cliente-icon-white" class="fa fa-users w3-margin-bottom w3-text-white" style="display:'none';font-size:0px;"></a>
+      <i id="cliente-icon-orange" class="fa fa-users w3-margin-bottom w3-text-orange" style="display:'block';font-size:120px;"></i>
+      <p>Quem são e onde então</p>
+    </div>
+  </div>
+
+  <div class="w3-quarter">
+   <div class="w3-card-2 w3-padding-top" style="min-height:280px"
+   onmouseover="document.getElementById('videoconferencia-icon-white').style='display:block;font-size:120px';document.getElementById('videoconferencia-icon-white').style.textDecoration='none';document.getElementById('videoconferencia-icon-orange').style='display:none';this.style.background='orange'" 
+   onmouseout="document.getElementById('videoconferencia-icon-white').style='display:none;font-size:120px';document.getElementById('videoconferencia-icon-orange').style='display:block;font-size:120px';this.style.background='white'"
+   >
+
+   <h3>Videoconferência</h3><br>
+
+   <a href="videoconferencia.html" id="videoconferencia-icon-white" class="fa fa-calendar w3-margin-bottom w3-text-white" style="display:'none';font-size:0px;"></a>
+   <i id="videoconferencia-icon-orange" class="fa fa-calendar w3-margin-bottom w3-text-orange" style="display:'block';font-size:120px"></i>
+   <p>Agende um horário</p>
+ </div>
+</div>
+
+<div class="w3-quarter">
+  <div class="w3-card-2 w3-padding-top" style="min-height:280px"
+  onmouseover="document.getElementById('outropop-icon-white').style='display:block;font-size:120px';document.getElementById('outropop-icon-white').style.textDecoration='none';document.getElementById('outropop-icon-orange').style='display:none';this.style.background='orange'" 
+  onmouseout="document.getElementById('outropop-icon-white').style='display:none;font-size:120px';document.getElementById('outropop-icon-orange').style='display:block;font-size:120px';this.style.background='white'"
+  >
+
+  <h3>Ponto de Presença</h3><br>
+
+  <a href="pontodepresenca.html" id="outropop-icon-white" class="fa fa-map-marker w3-margin-bottom w3-text-white" style="display:'none';font-size:0px;"></a>
+  <i id="outropop-icon-orange" class="fa fa-map-marker w3-margin-bottom w3-text-orange" style="display:'block';font-size:120px"></i>
+  <p>Informações</p>
+</div>
+</div>
+
+</div>
+
+
+<!-- Header 2-->
+<header class="w3-container w3-theme w3-padding" id="myHeader2"> 
+  <div class="w3-center">
+    <h1 class="w3-xxxlarge w3-animate-bottom">Notícias e informativos</h1>
+  </div>
+</header>
+
+
+<div id="slider_wrapper">
+  <div id="slider">
+
+    <div id="slides_info">
+      <div class="slide_info one">
+        <h3>FÓRUM RNP</h3>
+        <h4>A Rede Nacional de Ensino e Pesquisa (RNP) realiza, de 8 a 10/11, em Brasília, o Fórum RNP 2016.
+        </h4>
+        <a class="w3-btn w3-theme" href="https://forum.rnp.br/">Ver mais</a>
+      </div>
+      <div class="slide_info two">
+        <h3>Cinemas em Rede exibe o filme Urutau em oito salas pelo país</h3>
+        <h4>O projeto Cinemas em Rede exibe o longa-metragem “Urutau (link is external)”, do cineasta carioca Bernardo Cancella.
+        </h4>
+        <a class="w3-btn w3-theme" href="https://www.rnp.br/noticias/cinemas-rede-exibe-filme-urutau-oito-salas-pelo-pais">Ver mais</a>
+      </div>
+      <div class="slide_info three">
+        <h3>Pesquisadores desenvolvem ferramenta contra ataques DDoS</h3>
+        <h4>Na rede acadêmica, esses tipos de ataques chegam a representar 84% do total de incidentes registrados.
+        </h4>
+        <a class="w3-btn w3-theme" href="#">Ver mais</a>
+      </div>
+      <div class="slide_info four">
+        <h3>Revista recebe trabalhos sobre novas tecnologias para educação e saúde</h3>
+        <h4>Profissionais multidisciplinares envolvidos com novas tecnologias para a educação poderão submeter trabalhos para a Resdite.
+        </h4>   
+        <a class="w3-btn w3-theme" href="#">Ver mais</a>
+      </div>
+    </div>
+    
+    <div id="slides_image">
+      <div class="slide one">
+        <img src="/static/imagens/ddos.jpg" />
+      </div>    
+      <div class="slide two">
+        <img src="/static/imagens/reside.png" />
+      </div>    
+      <div class="slide three">       
+        <img src="/static/imagens/forum_2016.jpg" />
+      </div>    
+      <div class="slide four">        
+        <img src="/static/imagens/uruatau.jpg" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Header 3-->
+<header class="w3-container w3-theme w3-padding" id="myHeader3"> 
+  <div class="w3-center">
+    <h1 class="w3-xxxlarge w3-animate-bottom">Boletins de ocorrência</h1>
+  </div>
+</header>
+<br>
+<div class="w3-container">
+  <div class="w3-accordion">
+
+    {% for n in bos %}
+    <button onclick="myAccFunc('{{n.id}}')" class="w3-padding-16 w3-white w3-border w3-leftbar w3-border-orange w3-btn-block w3-left-align"><b>{{n.titulo}}</b> - <small>{{n.data}} </small> {% for 1 in n.impacto %} &nbsp;&nbsp;<i class="w3-text-orange fa fa-exclamation-circle" style="font-size:20px"></i> {% endfor %} </button>
+    <div id="{{n.id}}" class="w3-accordion-content">
+      <div class="w3-container w3-bottombar w3-border-orange">
+        <p>{{n.texto}}
+        </p>
+        <p><b>Atualizado por: {{n.administrador}}</b></p>
+      </div>
+    </div>
+    {% endfor %}
+    <hr style="height:0.1px; visibility:hidden; margin-bottom:-10px;">
+
+
+    <hr style="height:0.1px; visibility:hidden; margin-bottom: 6px;">
+
+  </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-container w3-theme-dark">
+  <h3>Footer</h3>
+  <p>Copyright © Ponto de Presença da RNP no Acre. Todos os direitos reservados</p>
+  <div style="position:relative;bottom:55px;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-theme w3-padding">Ir para o início</span>&nbsp;   
+    <a class="w3-text-white" href="#top"><span class="w3-xlarge">
+      <i class="fa fa-chevron-circle-up"></i></span>
+    </a>
+  </div>
+</footer>
+
+<!-- Script for Sidenav, Tabs, Accordions, Progress bars and slideshows -->
+<script>
+// Side navigation
+function w3_open() {
+  var x = document.getElementById("mySidenav");
+  x.style.width = "100%";
+  x.style.textAlign = "center";
+  x.style.fontSize = "50px";
+  x.style.paddingTop = "10%";
+  x.style.display = "block";
+}
+function w3_close() {
+  document.getElementById("mySidenav").style.display = "none";
+}
+
+// Tabs
+function openCity(evt, cityName) {
+  var i;
+  var x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+   x[i].style.display = "none";
+ }
+ var activebtn = document.getElementsByClassName("testbtn");
+ for (i = 0; i < x.length; i++) {
+  activebtn[i].className = activebtn[i].className.replace(" w3-theme-dark", "");
+}
+document.getElementById(cityName).style.display = "block";
+evt.currentTarget.className += " w3-theme-dark";
+}
+
+var mybtn = document.getElementsByClassName("testbtn")[0];
+mybtn.click();
+
+// Accordions
+function myAccFunc(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className = x.previousElementSibling.className.replace("w3-white", "w3-orange");
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace("w3-orange", "w3-white");
+  }
+}
+
+// Slideshows
+var slideIndex = 1;
+
+function plusDivs(n) {
+  slideIndex = slideIndex + n;
+  showDivs(slideIndex);
+}
+
+function showDivs(n) {
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+   x[i].style.display = "none";  
+ }
+ x[slideIndex-1].style.display = "block";  
+}
+
+showDivs(1);
+
+// Progress Bars
+function move() {
+  var elem = document.getElementById("myBar");   
+  var width = 1;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width == 100) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+      document.getElementById("demoprgr").innerHTML = width * 1  + '%';
+    }
+  }
+}
+
+
+
+</script>
+
+
+
+</body>
+</html>
