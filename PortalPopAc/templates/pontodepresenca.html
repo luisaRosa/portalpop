@@ -1,0 +1,373 @@
+
+<!DOCTYPE html>
+<html>
+<title>PoP :: AC</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3-theme-teal.css">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="static/css/style.css">
+<body>
+
+<div class="w3-container">
+
+<ul  class="w3-navbar w3-theme " id="top">
+  <li><a class="w3-padding-16" href="index.html">Início</a></li>
+  <li><a class="w3-padding-16" href="servicos.html" style="border-left: solid 1px #fff;">Servicos</a></li>
+  <li><a class="w3-padding-16" href="clientes.html" >Clientes</a></li>
+  <li><a class="w3-padding-16" href="videoconferencia.html" >Videoconferência</a></li>
+  <li><a class="w3-orange w3-padding-16" href="pontodepresenca.html" style="border-right: solid 1px #fff;">Ponto de Presença</a></li>
+  <li><a class="w3-padding-16" onclick="document.getElementById('ContatoModal').style.display='block'">Contato</a></li>
+  <li class="w3-right w3-dropdown-hover">
+    <a class="w3-padding-16" href="javascript:void(0)" style="border-left: solid 1px #fff;">Usuário <i class="fa fa-caret-down"></i></a>
+    <div class="w3-dropdown-content w3-card-4">
+      <a class="w3-padding-16" href="javascript:void(0)">Entrar</a>
+      <a class="w3-padding-16" href="javascript:void(0)">Cadastrar</a>
+    </div>
+  </li>
+</ul>
+<div class="w3-row w3-container w3-orange"><p></p></div>
+
+
+<!--img src="static/imagens/servicos2.png" alt="banner" height="170" width="100%" >
+
+<!-- Header -->
+<header class="w3-container w3-theme w3-padding" id="myHeader"> 
+  <div class="w3-center">
+  <h2 class=" w3-animate-bottom" style="color:#fff">Veja quem são e onde estão os nossos clientes</h2>
+  </div>
+</header>
+<br>
+
+<div class="w3-center">
+  <div class="w3-row" align="center">
+    <div class="w3-half" style="width: 69%;">
+      <div class="w3-card white">
+        <div class="w3-container w3-teal">
+          <h3 style="color:#fff">Sobre o PoP-AC</h3>
+        </div>
+        
+        <p>O Ponto de Presença da RNP no Acre tem por função básica manter, operar e coordenar ações na Internet acadêmica no Estado do Acre, servindo como ponto de acesso das instituições usuárias da RNP ao backbone da Rede Ipê.
+
+Ele está localizado na Capital Rio Branco e é administrado pela Universidade Federal do Acre.
+        </p>
+        <ul class="w3-ul w3-border-top">
+          <li>
+            <div class="w3-container">
+          <h3 class="w3-text-theme w3-left">A Sigla PoP</h3>
+        </div>
+            <p>POP, ou PoP, vem do inglês "Point of Presence". Significa "Ponto de Presença", e é o termo utilizado para indicar o ponto físico de uma determinada rede de comunicação em um determinado local ou cidade</p>
+          </li>
+          <li>
+            <div class="w3-container">
+          <h3 class="w3-text-theme w3-left">Os PoPs da RNP</h3>
+        </div>
+            <p>A RNP opera um serviço de backbone multigigabit para atender à comunidade acadêmica e de pesquisa, oferecendo acesso à Internet através dos seus pontos de presença (PoPs) regionais. Os PoPs da RNP, que compõem o seu backbone nacional, estão presentes em todos os 27 Estados da Federação. Instituições usuárias da infra-estrutura de rede da RNP conectam-se ao backbone diretamente, através dos PoPs, ou indiretamente, através de redes acadêmicas regionais.</p>
+          </li>
+        </ul>
+
+        <div class="w3-container w3-orange w3-large"><span class="w3-right">&nbsp;</span></div>
+      </div>
+    </div>
+
+    <div class="w3-half" style="width: 30%; margin-left: 1%;">
+      <div class="w3-card white">
+        <div class="w3-container w3-teal">
+          <h3 style="color:#fff">Visite os outros portais</h3>
+        </div>
+        <div class="w3-container">
+          <br>
+          <h3 class="w3-text-theme">Os PoPs no Brasil</h3>
+        </div>
+        <div>
+          <img class="aligncenter" src="static/imagens/mapa.png" alt="" usemap="#Map" width="281" height="285" border="0" style="width: 100%; max-width: 281px; height: auto;"><br>
+          <map name="Map">
+            <area coords="38,124" shape="poly" href="#">
+
+            <div class="w3-tooltip" style="position:absolute;left:71%;bottom:55px;">
+              <area coords="37,125,4,96,2,101,9,114,28,127" shape="poly" target="_blank" href="http://www.pop-ac.rnp.br">
+              <span class="w3-text w3-theme w3-padding">Acre</span>
+            </div>
+            
+            <div class="w3-tooltip" style="position:absolute;left:71%;bottom:55px;">
+              <area coords="30,34,31,75,6,94,41,123,75,102,108,107,111,93,123,60,102,42,85,56,76,29,60,40,53,42,46,32" shape="poly" target="_blank" href="http://www.pop-am.rnp.br">
+              <span class="w3-text w3-theme w3-padding">Amazonas</span>
+            </div>
+
+            <div class="w3-tooltip" style="position:absolute;left:71%;bottom:55px;">
+              <area coords="85,47,77,23,70,22,68,13,81,16,97,6,99,19,105,39" shape="poly" target="_blank" href="http://www.pop-rr.rnp.br">
+              <span class="w3-text w3-theme w3-padding">Roraima</span>
+            </div>
+
+            <div class="w3-tooltip" style="position:absolute;left:71%;;bottom:55px;">
+              <area coords="128,54,109,43,113,32,133,24,156,49,165,41,180,45,181,53,188,47,198,51,184,74,168,112,126,111,116,91" shape="poly" target="_blank" href="http://www.pop-pa.rnp.br">
+              <span class="w3-text w3-theme w3-padding">Pará</span>
+            </div>
+
+            <div class="w3-tooltip" style="position:absolute;left:71%;;bottom:55px;">
+              <area coords="161,10,155,24,140,25,157,45,169,32" target="_blank" shape="poly" href="http://www.pop-ap.rnp.br">
+              <span class="w3-text w3-theme w3-padding">Amapá</span>
+            </div>
+
+            <div class="w3-tooltip" style="position:absolute;left:71%;;bottom:55px;">
+              <area coords="97,143,69,134,65,114,77,104,89,112,99,130" target="_blank" shape="poly" href="http://www.pop-ro.rnp.br">
+              <span class="w3-text w3-theme w3-padding">Rondônia</span>
+            </div>
+
+            <div class="w3-tooltip" style="position:absolute;left:71%;;bottom:55px;">
+              <area coords="115,102,112,108,93,109,95,122,102,125,104,136,98,146,101,160,113,161,120,172,129,166,148,168,165,139,166,116,125,117" shape="poly" target="_blank" href="http://www.pop-mt.rnp.br">
+              <span class="w3-text w3-theme w3-padding">Mato Grosso</span>
+            </div>
+            
+            <div class="w3-tooltip" style="position:absolute;left:71%;;bottom:55px;">
+              <area coords="138,219,132,207,119,206,117,193,119,177,129,171,136,175,145,172,161,186,163,192,155,206" shape="poly" target="_blank" href="http://www.pop-ms.rnp.br">
+              <span class="w3-text w3-theme w3-padding">MG do Sul</span>
+            </div>
+            
+            <div class="w3-tooltip" style="position:absolute;left:71%;;bottom:55px;">
+              <area coords="149,172,167,143,177,140,194,143,194,150,186,163,186,174,164,183" shape="poly" target="_blank" href="http://www.pop-go.rnp.br">
+              <span class="w3-text w3-theme w3-padding">Goiás</span>
+            </div>
+
+            <div class="w3-tooltip" style="position:absolute;left:71%;;bottom:55px;">
+              <area coords="187,82,168,121,170,139,192,139,196,121,192,103" shape="poly" target="_blank" href="http://www.pop-to.rnp.br">
+              <span class="w3-text w3-theme w3-padding">Tocantins</span>
+            </div>
+            
+            <div class="w3-tooltip" style="position:absolute;left:71%;;bottom:55px;">
+              <area coords="148,238,163,239,169,235,177,236,178,231,170,217,157,212,148,215,141,228" shape="poly" target="_blank" href="http://www.pop-pr.rnp.br">
+              <span class="w3-text w3-theme w3-padding">Paraná</span>
+            </div>
+            
+            <div class="w3-tooltip" style="position:absolute;left:71%;;bottom:55px;">
+              <area coords="171,260,178,248,178,240,168,240,161,244,148,240,148,244,162,250" shape="poly" target="_blank" href="http://www.pop-sc.rnp.br">
+              <span class="w3-text w3-theme w3-padding">Santa Catarina</span>
+            </div>
+            
+            <div class="w3-tooltip" style="position:absolute;left:71%;;bottom:55px;">
+              <area coords="128,265,146,246,168,260,166,274,151,289" shape="poly" target="_blank" href="http://www.pop-rs.rnp.br">
+              <span class="w3-text w3-theme w3-padding">RS do Sul</span>
+            </div>
+            
+            <div class="w3-tooltip" style="position:absolute;left:71%;;bottom:55px;">
+              <area coords="205,212,195,214,187,193,178,193,167,191,155,208,173,215,182,228,205,218" shape="poly" target="_blank" href="http://www.pop-sp.rnp.br">
+              <span class="w3-text w3-theme w3-padding">São Paulo</span>
+            </div>
+            
+            <div class="w3-tooltip" style="position:absolute;left:71%;;bottom:55px;">
+              <area coords="199,156,189,163,188,178,169,184,164,191,186,192,195,210,205,210,222,203,230,188,235,177,237,164,221,154,214,156,211,151" shape="poly" target="_blank" href="http://www.pop-mg.rnp.br">
+              <span class="w3-text w3-theme w3-padding">Minas Gerais</span>
+            </div>
+            
+            <div class="w3-tooltip" style="position:absolute;left:71%;;bottom:55px;">
+              <area coords="223,215,208,213,210,210,219,208,226,203,231,207" shape="poly" target="_blank" href="http://www.pop-rj.rnp.br">
+              <span class="w3-text w3-theme w3-padding">Rio de Janeiro</span>
+            </div>
+
+            <div class="w3-tooltip" style="position:absolute;left:71%;;bottom:55px;">
+              <area coords="241,181,242,190,233,202,226,201,233,191,235,183" shape="poly" target="_blank" href="http://www.pop-es.rnp.br">
+              <span class="w3-text w3-theme w3-padding">Espírito Santo</span>
+            </div>
+
+            <div class="w3-tooltip" style="position:absolute;left:71%;;bottom:55px;">
+              <area coords="253,137,244,179,237,173,240,162,221,150,212,147,201,153,198,135,201,122,213,123,216,114,235,110,246,111,256,118,255,129,258,132" shape="poly" target="_blank" href="http://www.pop-ba.rnp.br">
+              <span class="w3-text w3-theme w3-padding">Bahia</span>
+            </div>
+            
+            <div class="w3-tooltip" style="position:absolute;left:71%;;bottom:55px;">
+              <area coords="268,124,262,131,257,126,258,120,259,116" shape="poly" target="_blank" href="http://www.pop-se.rnp.br">
+              <span class="w3-text w3-theme w3-padding">Sergipe</span>
+            </div>
+            
+            <div class="w3-tooltip" style="position:absolute;left:71%;;bottom:55px;">
+              <area coords="276,111,266,115,247,108,247,111,256,116,268,121" shape="poly" target="_blank" href="http://www.pop-al.rnp.br">
+              <span class="w3-text w3-theme w3-padding">Alagoas</span>
+            </div>
+            
+            <div class="w3-tooltip" style="position:absolute;left:71%;;bottom:55px;">
+              <area coords="236,106,242,98,252,100,261,100,265,107,276,100,278,109,265,113" shape="poly" target="_blank" href="http://www.pop-pe.rnp.br">
+              <span class="w3-text w3-theme w3-padding">Pernambuco</span>
+            </div>
+            
+            <div class="w3-tooltip" style="position:absolute;left:71%;;bottom:55px;">
+              <area coords="278,95,258,92,253,97,266,104,275,99" shape="poly" target="_blank" href="http://www.pop-pb.rnp.br">
+              <span class="w3-text w3-theme w3-padding">Paraíba</span>
+            </div>
+            
+            <div class="w3-tooltip" style="position:absolute;left:71%;;bottom:55px;">
+              <area coords="263,79,253,88,261,90,276,94,276,85" shape="poly" target="_blank" href="http://www.pop-rn.rnp.br">
+              <span class="w3-text w3-theme w3-padding">RN do Norte</span>
+            </div>
+            
+            <div class="w3-tooltip" style="position:absolute;left:71%;;bottom:55px;">
+              <area coords="240,78,239,94,250,98,253,87,259,78,244,64,236,65" shape="poly" target="_blank" href="http://www.pop-ce.rnp.br">
+              <span class="w3-text w3-theme w3-padding">Ceará</span>
+            </div>
+            
+            <div class="w3-tooltip" style="position:absolute;left:71%;;bottom:55px;">
+              <area coords="202,115,205,99,214,93,225,93,223,86,224,73,234,65,236,86,237,98,232,106,216,113,209,120" shape="poly" target="_blank" href="http://www.pop-pi.rnp.br">
+              <span class="w3-text w3-theme w3-padding">Piauí</span>
+            </div>
+            
+            <div class="w3-tooltip" style="position:absolute;left:71%;;bottom:55px;">
+              <area coords="189,76,202,53,210,56,210,62,216,63,227,64,223,89,206,98,201,115,196,110" shape="poly" target="_blank" href="http://www.pop-ma.rnp.br"> 
+              <span class="w3-text w3-theme w3-padding">Maranhão</span>
+            </div>
+            
+          <area coords="240,94,236,66" shape="poly" href="#">
+        </map>
+          </div>
+          <hr style="height:13px; visibility:hidden; margin-bottom:-10px;">
+          <p align="center">Clique em um estado para visitar seu portal</p>
+          <div class="w3-container w3-orange w3-large"><span class="w3-right">&nbsp;</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+
+
+
+<!--div class="w3-center">
+
+</div>
+</div>
+
+<div class="w3-row-padding" align="center">
+<div class="w3-third" style="width: 70%;margin-left: 2.5%;">
+<div class="w3-card white">
+  <div class="w3-container w3-orange">
+    <h3>Tráfego</h3>
+  </div>
+  <div class="w3-container" >
+  <img id="wmapimage" src="http://weathermap.pop-ac.rnp.br/plugins/weathermap/weathermap-cacti-plugin.php?action=viewimage&amp;id=8ffd6a6972d50475e8ee&amp;time=1461773102" width="100%" height="100%" border="0" usemap="#weathermap_8ffd6a6972d50475e8ee_imap">
+  </div>
+  <div class="w3-container">
+  <h3 class="w3-text-orange">Atualizado a cada 5 minutos</h3>
+  </div>
+  <div class="w3-container w3-orange w3-large"><span class="w3-right">&nbsp;</span></div>
+</div>
+</div>
+
+<div class="w3-half" style="width: 25%; margin-right: 2.5%;">
+<div class="w3-card white">
+  <div class="w3-container w3-orange">
+    <h3>Backbone Nacional PoP-AC/RNP</h3>
+  </div>
+  
+  <div class="w3-container" >
+
+  <img class="" border="0" name="image" alt="image" src="http://monitor.pop-ac.rnp.br/map.php?sysmapid=2&amp;severity_min=0" usemap="#links3" width="99.2%" height="100%">
+
+  </div>
+  <div class="w3-container w3-orange w3-large"><span class="w3-right">&nbsp;</span></div>
+</div>
+</div>
+
+</div>
+
+<br>
+
+<!-- Footer -->
+<footer class="w3-container w3-theme-dark">
+  <h3>Footer</h3>
+  <p>Copyright © Ponto de Presença da RNP no Acre. Todos os direitos reservados</p>
+  <div style="position:relative;bottom:55px;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-theme w3-padding">Ir para o início</span>&nbsp;   
+    <a class="w3-text-white" href="#top"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+</footer>
+
+<!-- Script for Sidenav, Tabs, Accordions, Progress bars and slideshows -->
+<script>
+// Side navigation
+function w3_open() {
+    var x = document.getElementById("mySidenav");
+    x.style.width = "100%";
+    x.style.textAlign = "center";
+    x.style.fontSize = "50px";
+    x.style.paddingTop = "10%";
+    x.style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidenav").style.display = "none";
+}
+
+// Tabs
+function openCity(evt, cityName) {
+  var i;
+  var x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  var activebtn = document.getElementsByClassName("testbtn");
+  for (i = 0; i < x.length; i++) {
+      activebtn[i].className = activebtn[i].className.replace(" w3-theme-dark", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " w3-theme-dark";
+}
+
+var mybtn = document.getElementsByClassName("testbtn")[0];
+mybtn.click();
+
+// Accordions
+function myAccFunc(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+        x.previousElementSibling.className = x.previousElementSibling.className.replace("w3-white", "w3-theme");
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+        x.previousElementSibling.className = 
+        x.previousElementSibling.className.replace("w3-theme", "w3-white");
+    }
+}
+
+// Slideshows
+var slideIndex = 1;
+
+function plusDivs(n) {
+slideIndex = slideIndex + n;
+showDivs(slideIndex);
+}
+
+function showDivs(n) {
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+
+showDivs(1);
+
+// Progress Bars
+function move() {
+  var elem = document.getElementById("myBar");   
+  var width = 1;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width == 100) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+      document.getElementById("demoprgr").innerHTML = width * 1  + '%';
+    }
+  }
+}
+
+
+
+</script>
+
+
+
+</body>
+</html>

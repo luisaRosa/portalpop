@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<title>PoP :: AC</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3-theme-teal.css">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="static/css/style.css">
+
+<link href='static/calendar/fullcalendar.css' rel='stylesheet' />
+<link href='static/calendar/fullcalendar.print.css' rel='stylesheet' media='print' />
+<script src='static/calendar/lib/moment.min.js'></script>
+<script src='static/calendar/lib/jquery.min.js'></script>
+<script src='static/calendar/fullcalendar.min.js'></script>
+<script src='static/calendar/locale-all.js'></script>
+
+<script>
+
+  $(document).ready(function() {
+    
+    $('#calendar').fullCalendar({
+      locale: 'pt',
+      defaultDate: '2016-09-12',
+      selectOverlap: false,
+      weekends: false,
+      editable: false,
+
+      selectable: true, // allow "more" link when too many events
+      select: function(start, end) {
+        var eventData;
+        eventData = {
+          id: 'novo',
+          title: 'Novo evento',
+          start: start,
+          end: end,
+          color: '#FF0000',
+        };
+
+        document.getElementById('nomeEvento').value = eventData.title;
+        document.getElementById('dataStart').valueAsDate = new Date(eventData.start);
+        $('#calendar').fullCalendar( 'removeEvents', ['novo',  ] );
+        $('#calendar').fullCalendar('renderEvent', eventData, true); // stick? = true
+        $('#calendar').fullCalendar('unselect');
+      },
+
+      eventClick: function(event) {
+        // opens events in a popup window
+        window.open(event.url, '_parent', 'width=700,height=600');
+        return false;
+      },
+      events: [
+
+        {
+          title: 'Aula de mestrado',
+          start: '2016-09-01',
+          end: '2016-09-01',
+          url: 'https://sites.google.com/site/macilonneto/disciplinas/ccet214/2016-1'
+        },
+        {
+          title: 'Reunião de equipe',
+          start: '2016-09-12',
+          end: '2016-09-12'
+        },
+      ],
+        eventColor: '#009688'
+    });
+    
+  });
+
+</script>
+<style>
+
+.w3-group{
+  margin-top:30px;
+  margin-bottom:30px;
+  text-align: left;
+}
+.w3-label {
+  font-size: 20px;
+}
+
+</style>
+
+<body>
+
+<div class="w3-container">
+
+<ul  class="w3-navbar w3-theme " id="top">
+  <li><a class="w3-padding-16" href="index.html">Início</a></li>
+  <li><a class="w3-padding-16" href="servicos.html" style="border-left: solid 1px #fff;">Servicos</a></li>
+  <li><a class="w3-padding-16" href="clientes.html" >Clientes</a></li>
+  <li><a class="w3-orange w3-padding-16" href="videoconferencia.html" >Videoconferência</a></li>
+  <li><a class="w3-padding-16" href="pontodepresenca.html" style="border-right: solid 1px #fff;">Ponto de Presença</a></li>
+  <li><a class="w3-padding-16" onclick="document.getElementById('ContatoModal').style.display='block'">Contato</a></li>
+  <li class="w3-right w3-dropdown-hover">
+    <a class="w3-padding-16" href="javascript:void(0)" style="border-left: solid 1px #fff;">Usuário <i class="fa fa-caret-down"></i></a>
+    <div class="w3-dropdown-content w3-card-4">
+      <a class="w3-padding-16" href="javascript:void(0)">Entrar</a>
+      <a class="w3-padding-16" href="javascript:void(0)">Cadastrar</a>
+    </div>
+  </li>
+</ul>
+<div class="w3-row w3-container w3-orange"><p></p></div>
+
+
+<!--img src="static/imagens/servicos2.png" alt="banner" height="170" width="100%" >
+
+<!-- Header -->
+<header class="w3-container w3-theme w3-padding" id="myHeader"> 
+  <div class="w3-center">
+  <h2 class=" w3-animate-bottom" style="color:#fff">Agende um horário</h2>
+  </div>
+</header>
+<br>
+
+<div class="w3-center">
+  <div class="w3-row" align="center">
+    <div class="w3-half" style="width: 76%;">
+      <div class="w3-card white">
+        <div class="w3-container w3-orange">
+          <h3 style="color:#fff">Agenda de eventos</h3>
+        </div>
+        <div class="w3-container" >
+          <br>
+          <div id='calendar' style="max-width: 90%;margin: 0 auto;"></div>
+          <br>
+        </div>
+        <div class="w3-container w3-orange w3-large"><span class="w3-right">&nbsp;</span></div>
+      </div>
+    </div>
+
+    <div class="w3-half" style="width: 23%; margin-left: 1%;">
+      <div class="w3-card white">
+        <div class="w3-container w3-orange">
+          <h3 style="color:#fff">Agende um novo evento!</h3>
+        </div>
+        <div class="w3-container" >
+          <form id="contato">
+            <br>
+            <br>
+            <div class="w3-group">      
+              <label  class="w3-label w3-validate">Nome do evento</label>
+              <input id="nomeEvento" class="w3-input" type="text" required>
+            </div>
+            <hr style="height:0.1px; margin-bottom: 30px;">
+            <div class="w3-group">      
+              <label  class="w3-label w3-validate">Data</label>
+              <input id="dataStart" class="w3-input" type="date" required>
+            </div>
+            <div class="w3-group">      
+              <label class="w3-label w3-validate">Hora de entrada</label>
+              <input class="w3-input" type="time" required>
+            </div>
+            <div class="w3-group">      
+              <label class="w3-label w3-validate">Hora de saída</label>
+              <input class="w3-input" type="time" required>
+            </div>
+            <hr style="height:0.1px; margin-bottom: 30px;">
+            <div class="w3-group">   
+              <label class="w3-label">Comentário</label>   
+              <textarea class="w3-input" name="mensagem" form="contato"></textarea>
+            </div>
+            <hr style="height:0.1px; margin-bottom: 39px;">
+            <div>  
+              <p align="right">
+                <a class="w3-btn w3-theme">Enviar</a>
+              </p> 
+            </div>
+          </form>  
+        </div>
+        <div class="w3-container w3-orange w3-large"><span class="w3-right">&nbsp;</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+
+<!--div class="w3-center">
+
+</div>
+</div>
+
+<div class="w3-row-padding">
+<div class="w3-half">
+<div class="w3-card white">
+  <div class="w3-container w3-orange">
+    <h3>Tráfego</h3>
+  </div>
+  <div class="w3-container" >
+  <img id="wmapimage" src="http://weathermap.pop-ac.rnp.br/plugins/weathermap/weathermap-cacti-plugin.php?action=viewimage&amp;id=8ffd6a6972d50475e8ee&amp;time=1461773102" width="100%" height="100%" border="0" usemap="#weathermap_8ffd6a6972d50475e8ee_imap">
+  </div>
+  <div class="w3-container">
+  <h3 class="w3-text-orange">Atualizado a cada 5 minutos</h3>
+  </div>
+  <div class="w3-container w3-orange w3-large"><span class="w3-right">&nbsp;</span></div>
+</div>
+</div>
+
+<div class="w3-half">
+<div class="w3-card white">
+  <div class="w3-container w3-orange">
+    <h3>Backbone Nacional PoP-AC/RNP</h3>
+  </div>
+  
+  <div class="w3-container" >
+
+  <img class="" border="0" name="image" alt="image" src="http://monitor.pop-ac.rnp.br/map.php?sysmapid=2&amp;severity_min=0" usemap="#links3" width="99.2%" height="100%">
+
+  </div>
+  <div class="w3-container w3-orange w3-large"><span class="w3-right">&nbsp;</span></div>
+</div>
+</div>
+
+</div>
+
+<br>
+
+<!-- Footer -->
+<footer class="w3-container w3-theme-dark">
+  <h3>Footer</h3>
+  <p>Copyright © Ponto de Presença da RNP no Acre. Todos os direitos reservados</p>
+  <div style="position:relative;bottom:55px;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-theme w3-padding">Ir para o início</span>&nbsp;   
+    <a class="w3-text-white" href="#top"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+</footer>
+
+<!-- Script for Sidenav, Tabs, Accordions, Progress bars and slideshows -->
+<script>
+// Side navigation
+function w3_open() {
+    var x = document.getElementById("mySidenav");
+    x.style.width = "100%";
+    x.style.textAlign = "center";
+    x.style.fontSize = "50px";
+    x.style.paddingTop = "10%";
+    x.style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidenav").style.display = "none";
+}
+
+// Tabs
+function openCity(evt, cityName) {
+  var i;
+  var x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  var activebtn = document.getElementsByClassName("testbtn");
+  for (i = 0; i < x.length; i++) {
+      activebtn[i].className = activebtn[i].className.replace(" w3-theme-dark", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " w3-theme-dark";
+}
+
+var mybtn = document.getElementsByClassName("testbtn")[0];
+mybtn.click();
+
+// Accordions
+function myAccFunc(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+        x.previousElementSibling.className = x.previousElementSibling.className.replace("w3-white", "w3-theme");
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+        x.previousElementSibling.className = 
+        x.previousElementSibling.className.replace("w3-theme", "w3-white");
+    }
+}
+
+// Slideshows
+var slideIndex = 1;
+
+function plusDivs(n) {
+slideIndex = slideIndex + n;
+showDivs(slideIndex);
+}
+
+function showDivs(n) {
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+
+showDivs(1);
+
+// Progress Bars
+function move() {
+  var elem = document.getElementById("myBar");   
+  var width = 1;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width == 100) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+      document.getElementById("demoprgr").innerHTML = width * 1  + '%';
+    }
+  }
+}
+
+
+
+</script>
+
+
+
+</body>
+</html>

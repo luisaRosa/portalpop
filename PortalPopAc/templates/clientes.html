@@ -1,0 +1,425 @@
+
+<!DOCTYPE html>
+<html>
+<title>PoP :: AC</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3-theme-teal.css">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="static/css/style.css">
+<body>
+
+<div class="w3-container">
+
+<ul  class="w3-navbar w3-theme " id="top">
+  <li><a class="w3-padding-16" href="index.html">Início</a></li>
+  <li><a class="w3-padding-16" href="servicos.html" style="border-left: solid 1px #fff;">Servicos</a></li>
+  <li><a class="w3-orange w3-padding-16" href="clientes.html" >Clientes</a></li>
+  <li><a class="w3-padding-16" href="videoconferencia.html" >Videoconferência</a></li>
+  <li><a class="w3-padding-16" href="pontodepresenca.html" style="border-right: solid 1px #fff;">Ponto de Presença</a></li>
+  <li><a class="w3-padding-16" onclick="document.getElementById('ContatoModal').style.display='block'">Contato</a></li>
+  <li class="w3-right w3-dropdown-hover">
+    <a class="w3-padding-16" href="javascript:void(0)" style="border-left: solid 1px #fff;">Usuário <i class="fa fa-caret-down"></i></a>
+    <div class="w3-dropdown-content w3-card-4">
+      <a class="w3-padding-16" href="javascript:void(0)">Entrar</a>
+      <a class="w3-padding-16" href="javascript:void(0)">Cadastrar</a>
+    </div>
+  </li>
+</ul>
+<div class="w3-row w3-container w3-orange"><p></p></div>
+
+
+<!--img src="static/imagens/servicos2.png" alt="banner" height="170" width="100%" >
+
+<!-- Header -->
+<header class="w3-container w3-theme w3-padding" id="myHeader"> 
+  <div class="w3-center">
+  <h2 class=" w3-animate-bottom" style="color:#fff">Veja quem são e onde estão os nossos clientes</h2>
+  </div>
+</header>
+
+
+
+<div class="tabs">
+    <!-- Radio button and lable for #tab-content1 -->
+    <input type="radio" name="tabs" id="tab1" checked >
+    <label style="width: 50%;" for="tab1">
+        <i class="fa fa-sitemap"></i><span>Rede Comp</span>
+    </label>
+    <!-- Radio button and lable for #tab-content2 -->
+    <input type="radio" name="tabs" id="tab2">
+    <label style="width: 50%;" for="tab2">
+        <i class="fa fa-sitemap"></i><span>Rede Ipê</span>
+    </label>
+
+
+    <div id="tab-content1" class="tab-content" align="center">
+       <h1>Rede Comp</h1>
+       <div class="w3-accordion">
+
+        <button onclick="myAccFunc('Servico1')" class="w3-padding-16 w3-white w3-border w3-leftbar w3-border-theme w3-btn-block w3-left-align" ><h4><b>Universidade Federal do Acre - Campus Rio Branco</b></h4></button><div id="Servico1" class="w3-accordion-content">
+        <div class="w3-container w3-bottombar w3-border-orange">
+          <h3> 
+            BR 364 Km 05 69915-900 Rio Branco – AC 
+            (68) 3901 2553
+          </h3>
+        </div>
+      </div>
+      <hr style="height:0.1px; visibility:hidden; margin-bottom:-10px;">
+
+      <button onclick="myAccFunc('Servico2')" class="w3-padding-16 w3-white w3-border w3-leftbar w3-border-theme w3-btn-block w3-left-align" ><h4><b>Universidade Federal do Acre - Campus Floresta </b></h4></button>
+      <div id="Servico2" class="w3-accordion-content">
+        <div class="w3-container w3-bottombar w3-border-orange">
+          <h3> 
+            Estrada do Canela Fina, Km 12, Gleba Formoso, Lote 245, Colônia São 
+            Francisco, CEP: 69980-000, Cruzeiro do Sul  
+            (68) 3311 2500
+          </h3>
+        </div>
+      </div>
+      <hr style="height:0.1px; visibility:hidden; margin-bottom:-10px;">
+
+      <button onclick="myAccFunc('Servico3')" class="w3-padding-16 w3-white w3-border w3-leftbar w3-border-theme w3-btn-block w3-left-align" ><h4><b>Universidade Federal do Acre - Fazenda Experimental Catuaba</b></h4></button>
+      <div id="Servico3" class="w3-accordion-content">
+        <div class="w3-container w3-bottombar w3-border-orange">
+          <h3> BR 364 – Km 69900-000 Rio Branco – AC   
+          </h3>
+        </div>
+      </div>
+      <hr style="height:0.1px; visibility:hidden; margin-bottom:-10px;">
+
+      <button onclick="myAccFunc('Servico4')" class="w3-padding-16 w3-white w3-border w3-leftbar w3-border-theme w3-btn-block w3-left-align" ><h4><b>Universidade Federal do Acre - Colégio de Aplicação</b></h4></button>
+      <div id="Servico4" class="w3-accordion-content">
+      <div class="w3-container w3-bottombar w3-border-orange">
+        <h3> 
+          Av. Getúlio Vargas, 654 - Centro 69900-000 Rio Branco – AC 
+          (68) 3224 2826 | (68) 3224 4088
+        </h3>
+      </div>
+    </div>
+    <hr style="height:0.1px; visibility:hidden; margin-bottom:-10px;">
+
+    <button onclick="myAccFunc('Servico5')" class="w3-padding-16 w3-white w3-border w3-leftbar w3-border-theme w3-btn-block w3-left-align" ><h4><b>Instituto Federal de Educação, Ciência e Tecnologia do Acre
+      - Reitoria</b></h4></button>
+      <div id="Servico5" class="w3-accordion-content">
+        <div class="w3-container w3-bottombar w3-border-orange">
+          <h3> 
+            Rua Coronel José Galdino, 495, Bosque, Rio Branco/AC - CEP 69900-640 
+            Telefone: (68) 3222-8291 | Ouvidoria: (68) 3224-5239
+          </h3>
+        </div>
+      </div>
+      <hr style="height:0.1px; visibility:hidden; margin-bottom:-10px;">
+
+      <button onclick="myAccFunc('Servico6')" class="w3-padding-16 w3-white w3-border w3-leftbar w3-border-theme w3-btn-block w3-left-align" ><h4><b>Instituto Federal de Educação, Ciência e Tecnologia do Acre - Campus Rio Branco</b></h4></button>
+      <div id="Servico6" class="w3-accordion-content">
+        <div class="w3-container w3-bottombar w3-border-orange">
+          <h3> 
+            Rua Avenida Brasil, 920 - Conjunto Xavier Maia - Rio Branco/AC  CEP: 69903-068 
+            (68) 3222 8402
+          </h3>
+        </div>
+      </div>
+      <hr style="height:0.1px; visibility:hidden; margin-bottom:-10px;">
+
+      <button onclick="myAccFunc('Servico7')" class="w3-padding-16 w3-white w3-border w3-leftbar w3-border-theme w3-btn-block w3-left-align" ><h4><b>Ordem dos Advogados do Brasil - OAB/AC</b></h4></button>
+      <div id="Servico7" class="w3-accordion-content">
+        <div class="w3-container w3-bottombar w3-border-orange">
+          <h3> 
+            ALAMEDA MINISTRO MIGUEL FERRANTE, S/N, BAIRRO: PORTAL DA AMAZÔNIA   RIO BRANCO   ACRE   69.915-632   BRASIL 
+            (68) 3216-4000 | (68) 3216-4001
+          </h3>
+        </div>
+      </div>
+      <hr style="height:0.1px; visibility:hidden; margin-bottom:-10px;">
+
+      <button onclick="myAccFunc('Servico8')" class="w3-padding-16 w3-white w3-border w3-leftbar w3-border-theme w3-btn-block w3-left-align" ><h4><b>Escola de Enfermagem</b></h4></button>
+      <div id="Servico8" class="w3-accordion-content">
+        <div class="w3-container w3-bottombar w3-border-orange">
+          <h3> 
+            Rodovia BR 364 – Km 02 Via Verde 69900-000 Rio Branco – AC 
+            (68) 3226 7330 | (68) 3227 2716   </h3>
+          </div>
+        </div>
+        <hr style="height:0.1px; visibility:hidden; margin-bottom:-10px;">
+
+        <button onclick="myAccFunc('Servico9')" class="w3-padding-16 w3-white w3-border w3-leftbar w3-border-theme w3-btn-block w3-left-align" ><h4><b>Hospital da Criança/Hosp. Maternidade</b></h4></button>
+        <div id="Servico9" class="w3-accordion-content">
+          <div class="w3-container w3-bottombar w3-border-orange">
+            <h3> 
+              Av. Getúlio Vargas n º 811, Centro CEP 69900-000 - Rio Branco – AC 
+              (68) 3223 9681 | (68) 3223-5829   </h3>
+            </div>
+          </div>
+          <hr style="height:0.1px; visibility:hidden; margin-bottom:-10px;">
+
+          <button onclick="myAccFunc('Servico10')" class="w3-padding-16 w3-white w3-border w3-leftbar w3-border-theme w3-btn-block w3-left-align" ><h4><b>FUNDHACRE</b></h4></button>
+          <div id="Servico10" class="w3-accordion-content">
+            <div class="w3-container w3-bottombar w3-border-orange">
+              <h3> 
+                Rodovia BR 364 – Km 02 Via Verde 69900-000 Rio Branco – AC 
+                (68) 3222-4326 | (68) 3222 3306 | (68) 9971 3121
+              </h3>
+            </div>
+          </div>
+          <hr style="height:0.1px; visibility:hidden; margin-bottom:-10px;">
+
+          <button onclick="myAccFunc('Servico11')" class="w3-padding-16 w3-white w3-border w3-leftbar w3-border-theme w3-btn-block w3-left-align" ><h4><b>FUNTAC</b></h4></button>
+          <div id="Servico11" class="w3-accordion-content">
+            <div class="w3-container w3-bottombar w3-border-orange">
+              <h3> 
+                Av. das Acácias, Zona A, Distrito Industrial – CEP 69917-100 Rio Branco - Acre - Brasil 
+                (68) 3229 2994 | (68) 3229 2304 | </h3>
+              </div>
+            </div>
+            <hr style="height:0.1px; visibility:hidden; margin-bottom:-10px;">
+
+        </div>
+    </div> <!-- #tab-content1 -->
+
+    <div id="tab-content2" class="tab-content" align="center">
+       <h1>Rede Ipê</h1>
+       <div class="w3-accordion">
+
+        <button onclick="myAccFunc('Servico12')" class="w3-padding-16 w3-white w3-border w3-leftbar w3-border-theme w3-btn-block w3-left-align" ><h4><b>Universidade Federal do Acre - Campus Rio Branco</b></h4></button><div id="Servico12" class="w3-accordion-content">
+        <div class="w3-container w3-bottombar w3-border-orange">
+          <h3> 
+            BR 364 Km 05 69915-900 Rio Branco – AC 
+            (68) 3901 2553
+          </h3>
+        </div>
+      </div>
+      <hr style="height:0.1px; visibility:hidden; margin-bottom:-10px;">
+
+      <button onclick="myAccFunc('Servico13')" class="w3-padding-16 w3-white w3-border w3-leftbar w3-border-theme w3-btn-block w3-left-align" ><h4><b>Universidade Federal do Acre - Campus Floresta </b></h4></button>
+      <div id="Servico13" class="w3-accordion-content">
+        <div class="w3-container w3-bottombar w3-border-orange">
+          <h3> 
+            Estrada do Canela Fina, Km 12, Gleba Formoso, Lote 245, Colônia São 
+            Francisco, CEP: 69980-000, Cruzeiro do Sul  
+            (68) 3311 2500
+          </h3>
+        </div>
+      </div>
+      <hr style="height:0.1px; visibility:hidden; margin-bottom:-10px;">
+
+      <button onclick="myAccFunc('Servico14')" class="w3-padding-16 w3-white w3-border w3-leftbar w3-border-theme w3-btn-block w3-left-align" ><h4><b>Universidade Federal do Acre - Fazenda Experimental Catuaba</b></h4></button>
+      <div id="Servico14" class="w3-accordion-content">
+        <div class="w3-container w3-bottombar w3-border-orange">
+          <h3> BR 364 – Km 69900-000 Rio Branco – AC   
+          </h3>
+        </div>
+      </div>
+      <hr style="height:0.1px; visibility:hidden; margin-bottom:-10px;">
+
+      <button onclick="myAccFunc('Servico15')" class="w3-padding-16 w3-white w3-border w3-leftbar w3-border-theme w3-btn-block w3-left-align" ><h4><b>Universidade Federal do Acre - Colégio de Aplicação</b></h4></button>
+      <div id="Servico15" class="w3-accordion-content">
+      <div class="w3-container w3-bottombar w3-border-orange">
+        <h3> 
+          Av. Getúlio Vargas, 654 - Centro 69900-000 Rio Branco – AC 
+          (68) 3224 2826 | (68) 3224 4088
+        </h3>
+      </div>
+    </div>
+    <hr style="height:0.1px; visibility:hidden; margin-bottom:-10px;">
+
+      <button onclick="myAccFunc('Servico16')" class="w3-padding-16 w3-white w3-border w3-leftbar w3-border-theme w3-btn-block w3-left-align" ><h4><b>Instituto Federal de Educação, Ciência e Tecnologia do Acre - Campus Rio Branco</b></h4></button>
+      <div id="Servico16" class="w3-accordion-content">
+        <div class="w3-container w3-bottombar w3-border-orange">
+          <h3> 
+            Rua Avenida Brasil, 920 - Conjunto Xavier Maia - Rio Branco/AC  CEP: 69903-068 
+            (68) 3222 8402
+          </h3>
+        </div>
+      </div>
+      <hr style="height:0.1px; visibility:hidden; margin-bottom:-10px;">
+
+      <button onclick="myAccFunc('Servico17')" class="w3-padding-16 w3-white w3-border w3-leftbar w3-border-theme w3-btn-block w3-left-align" ><h4><b>Instituto Federal de Educação, Ciência e Tecnologia do Acre - Campus Cruzeiro do Sul</b></h4></button>
+      <div id="Servico17" class="w3-accordion-content">
+        <div class="w3-container w3-bottombar w3-border-orange">
+          <h3> 
+            Endereço: Estrada Velha do Aeroporto, nº 100 - Nova Olinda – Cruzeiro do Sul/AC CEP 69900-000
+            (68) 3322-1149
+          </h3>
+        </div>
+      </div>
+      <hr style="height:0.1px; visibility:hidden; margin-bottom:-10px;">
+
+      <button onclick="myAccFunc('Servico18')" class="w3-padding-16 w3-white w3-border w3-leftbar w3-border-theme w3-btn-block w3-left-align" ><h4><b>Escola Técnica em Saúde Maria Moreira da Rocha</b></h4></button>
+      <div id="Servico18" class="w3-accordion-content">
+        <div class="w3-container w3-bottombar w3-border-orange">
+          <h3> 
+            Rodovia BR 364 – Km 02 Via Verde 69900-000 Rio Branco – AC 
+            (68) 3226 7330 | (68) 3227 2716   </h3>
+          </div>
+        </div>
+        <hr style="height:0.1px; visibility:hidden; margin-bottom:-10px;">
+
+        <button onclick="myAccFunc('Servico19')" class="w3-padding-16 w3-white w3-border w3-leftbar w3-border-theme w3-btn-block w3-left-align" ><h4><b>EMBRAPA</b></h4></button>
+        <div id="Servico19" class="w3-accordion-content">
+          <div class="w3-container w3-bottombar w3-border-orange">
+            <h3> 
+              Rodovia BR-364 Km 14 - CEP 69908-970 Rio Branco – Acre – Brasil</h3>
+            </div>
+          </div>
+          <hr style="height:0.1px; visibility:hidden; margin-bottom:-10px;">
+
+          <button onclick="myAccFunc('Servico20')" class="w3-padding-16 w3-white w3-border w3-leftbar w3-border-theme w3-btn-block w3-left-align" ><h4><b>Fundação Hospital Estadual do Acre - FUNDHACRE</b></h4></button>
+          <div id="Servico20" class="w3-accordion-content">
+            <div class="w3-container w3-bottombar w3-border-orange">
+              <h3> 
+                Rodovia BR 364 – Km 02 Via Verde 69900-000 Rio Branco – AC 
+                (68) 3222-4326 | (68) 3222 3306 | (68) 9971 3121
+              </h3>
+            </div>
+          </div>
+          <hr style="height:0.1px; visibility:hidden; margin-bottom:-10px;">
+
+
+        </div>
+    </div> <!-- #tab-content2 -->
+
+</div>
+
+
+<!--div class="w3-center">
+
+</div>
+</div>
+
+<div class="w3-row-padding" align="center">
+<div class="w3-third" style="width: 70%;margin-left: 2.5%;">
+<div class="w3-card white">
+  <div class="w3-container w3-orange">
+    <h3>Tráfego</h3>
+  </div>
+  <div class="w3-container" >
+  <img id="wmapimage" src="http://weathermap.pop-ac.rnp.br/plugins/weathermap/weathermap-cacti-plugin.php?action=viewimage&amp;id=8ffd6a6972d50475e8ee&amp;time=1461773102" width="100%" height="100%" border="0" usemap="#weathermap_8ffd6a6972d50475e8ee_imap">
+  </div>
+  <div class="w3-container">
+  <h3 class="w3-text-orange">Atualizado a cada 5 minutos</h3>
+  </div>
+  <div class="w3-container w3-orange w3-large"><span class="w3-right">&nbsp;</span></div>
+</div>
+</div>
+
+<div class="w3-half" style="width: 25%; margin-right: 2.5%;">
+<div class="w3-card white">
+  <div class="w3-container w3-orange">
+    <h3>Backbone Nacional PoP-AC/RNP</h3>
+  </div>
+  
+  <div class="w3-container" >
+
+  <img class="" border="0" name="image" alt="image" src="http://monitor.pop-ac.rnp.br/map.php?sysmapid=2&amp;severity_min=0" usemap="#links3" width="99.2%" height="100%">
+
+  </div>
+  <div class="w3-container w3-orange w3-large"><span class="w3-right">&nbsp;</span></div>
+</div>
+</div>
+
+</div>
+
+<br>
+
+<!-- Footer -->
+<footer class="w3-container w3-theme-dark">
+  <h3>Footer</h3>
+  <p>Copyright © Ponto de Presença da RNP no Acre. Todos os direitos reservados</p>
+  <div style="position:relative;bottom:55px;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-theme w3-padding">Ir para o início</span>&nbsp;   
+    <a class="w3-text-white" href="#top"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+</footer>
+
+<!-- Script for Sidenav, Tabs, Accordions, Progress bars and slideshows -->
+<script>
+// Side navigation
+function w3_open() {
+    var x = document.getElementById("mySidenav");
+    x.style.width = "100%";
+    x.style.textAlign = "center";
+    x.style.fontSize = "50px";
+    x.style.paddingTop = "10%";
+    x.style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidenav").style.display = "none";
+}
+
+// Tabs
+function openCity(evt, cityName) {
+  var i;
+  var x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  var activebtn = document.getElementsByClassName("testbtn");
+  for (i = 0; i < x.length; i++) {
+      activebtn[i].className = activebtn[i].className.replace(" w3-theme-dark", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " w3-theme-dark";
+}
+
+var mybtn = document.getElementsByClassName("testbtn")[0];
+mybtn.click();
+
+// Accordions
+function myAccFunc(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+        x.previousElementSibling.className = x.previousElementSibling.className.replace("w3-white", "w3-theme");
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+        x.previousElementSibling.className = 
+        x.previousElementSibling.className.replace("w3-theme", "w3-white");
+    }
+}
+
+// Slideshows
+var slideIndex = 1;
+
+function plusDivs(n) {
+slideIndex = slideIndex + n;
+showDivs(slideIndex);
+}
+
+function showDivs(n) {
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+
+showDivs(1);
+
+// Progress Bars
+function move() {
+  var elem = document.getElementById("myBar");   
+  var width = 1;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width == 100) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+      document.getElementById("demoprgr").innerHTML = width * 1  + '%';
+    }
+  }
+}
+
+
+
+</script>
+
+
+
+</body>
+</html>
